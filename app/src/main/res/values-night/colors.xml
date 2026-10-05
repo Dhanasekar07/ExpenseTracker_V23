@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Icon (same) -->
+    <color name="icon_background">#0F172A</color>
+
+    <!-- Brand (same) -->
+    <color name="brand_primary">#52B788</color>
+    <color name="brand_light">#86EFAC</color>
+
+    <!-- Backgrounds -->
+    <color name="bg_page">#111111</color>
+    <color name="bg_card">#1E1E1E</color>
+    <color name="bg_input">#2A2A2A</color>
+    <color name="bg_overlay">#EE000000</color>
+
+    <!-- Text -->
+    <color name="text_primary">#F1F1F1</color>
+    <color name="text_secondary">#A0A0A0</color>
+    <color name="text_hint">#6B6B6B</color>
+    <color name="text_on_brand">#FFFFFF</color>
+
+    <!-- Borders & dividers -->
+    <color name="border">#333333</color>
+    <color name="divider">#2A2A2A</color>
+
+    <!-- Nav -->
+    <color name="nav_bg">#1A1A1A</color>
+    <color name="nav_inactive">#6B6B6B</color>
+    <color name="nav_active">#52B788</color>
+
+    <!-- Filter tabs -->
+    <color name="filter_active_bg">#52B788</color>
+    <color name="filter_active_text">#111111</color>
+    <color name="filter_inactive_text">#A0A0A0</color>
+
+    <!-- Status -->
+    <color name="amount_negative">#F87171</color>
+    <color name="status_success">#52B788</color>
+    <color name="status_error">#F87171</color>
+
+    <!-- Pie chart empty -->
+    <color name="chart_empty">#2A2A2A</color>
+    <color name="chart_hole">#1E1E1E</color>
+
+    <!-- Row backgrounds -->
+    <color name="row_normal">#1E1E1E</color>
+    <color name="row_highlight">#1A2E1A</color>
+
+    <!-- Onboarding -->
+    <color name="onboard_bg">#111111</color>
+    <color name="onboard_card">#1E1E1E</color>
+</resources>

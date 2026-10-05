@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FAFAFA">
+
+    <!-- Top spacer -->
+    <View android:layout_width="0dp" android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Card container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_perm_card"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:elevation="4dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GRANT PERMISSIONS"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#9E9E9E"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Permission 1: SMS -->
+        <LinearLayout
+            android:id="@+id/permSms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/iconSms"
+                android:layout_width="26dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_sms_perm"
+                android:layout_marginEnd="14dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SMS permission"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#212121"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MANDATORY"
+                        android:textSize="9sp"
+                        android:textStyle="bold"
+                        android:textColor="#9E9E9E"
+                        android:background="@drawable/bg_mandatory_tag"
+                        android:paddingStart="6dp"
+                        android:paddingEnd="6dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="to detect payment SMS and track expenses"
+                    android:textSize="12sp"
+                    android:textColor="#757575"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/checkSms"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_check_grey"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Permission 2: Notification Listener -->
+        
+        <!-- Permission 3: Overlay -->
+        <LinearLayout
+            android:id="@+id/permOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/iconOverlay"
+                android:layout_width="21dp"
+                android:layout_height="27dp"
+                android:src="@drawable/ic_overlay"
+                android:layout_marginEnd="14dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Overlay permission"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#212121"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MANDATORY"
+                        android:textSize="9sp"
+                        android:textStyle="bold"
+                        android:textColor="#9E9E9E"
+                        android:background="@drawable/bg_mandatory_tag"
+                        android:paddingStart="6dp"
+                        android:paddingEnd="6dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="to show category popup after payments"
+                    android:textSize="12sp"
+                    android:textColor="#757575"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/checkOverlay"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_check_grey"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Permission 4: Battery Optimization -->
+        <LinearLayout
+            android:id="@+id/permBattery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iconBattery"
+                android:layout_width="20dp"
+                android:layout_height="44dp"
+                android:src="@drawable/ic_battery_perm"
+                android:layout_marginEnd="14dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Battery optimization"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#212121"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MANDATORY"
+                        android:textSize="9sp"
+                        android:textStyle="bold"
+                        android:textColor="#9E9E9E"
+                        android:background="@drawable/bg_mandatory_tag"
+                        android:paddingStart="6dp"
+                        android:paddingEnd="6dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="to keep tracking active in the background"
+                    android:textSize="12sp"
+                    android:textColor="#757575"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/checkBattery"
+                android:layout_width="28dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_check_grey"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Continue button -->
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="Grant Permissions"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:background="@drawable/bg_button_green"
+        android:stateListAnimator="@null"/>
+
+</LinearLayout>

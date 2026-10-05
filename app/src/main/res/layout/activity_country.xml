@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F8"
+    android:padding="24dp">
+
+    <!-- Card container -->
+    <LinearLayout
+        android:id="@+id/cardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_card_rounded"
+        android:padding="24dp"
+        android:elevation="4dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="80dp">
+
+        <!-- Location pin icon -->
+        <ImageView
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:src="@drawable/ic_location_pin"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Your Country"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A2E"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please select your country to help us give you a better experience"
+            android:textSize="14sp"
+            android:textColor="#6B7280"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Country selector row -->
+        <LinearLayout
+            android:id="@+id/countrySelector"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_country_row"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/tvCountryFlag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🇮🇳"
+                android:textSize="22sp"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:id="@+id/tvCountryName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="India"
+                android:textSize="16sp"
+                android:textColor="#1A1A2E"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="→"
+                android:textSize="18sp"
+                android:textColor="#6B7280"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Go Ahead Button -->
+    <Button
+        android:id="@+id/btnGoAhead"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Go ahead"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/bg_button_green"
+        android:stateListAnimator="@null"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"/>
+
+</RelativeLayout>

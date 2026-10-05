@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA">
+
+    <!-- STEP 1: Notification Permission -->
+    <LinearLayout
+        android:id="@+id/stepNotification"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="28dp">
+
+        <!-- Top spacer -->
+        <View android:layout_width="0dp" android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <!-- Icon -->
+        <ImageView
+            android:id="@+id/imgNotifIcon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_notification"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Status icon (tick/sad) - hidden initially -->
+        <ImageView
+            android:id="@+id/imgNotifStatus"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:visibility="gone"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvNotifTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notification Access"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A1A"
+            android:gravity="center"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/tvNotifSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We respect your privacy. No details are shared anywhere."
+            android:textSize="15sp"
+            android:textColor="#757575"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- Preview Cards -->
+        <LinearLayout
+            android:id="@+id/notifPreviewCards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="32dp">
+
+            <!-- Card 1: Bank SMS preview -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_elevated"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="14dp"
+                android:layout_marginBottom="10dp"
+                android:elevation="2dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_dialog_info"
+                    android:layout_marginEnd="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HDFC Bank"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#212121"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹500 debited from A/c XXXX9465"
+                        android:textSize="12sp"
+                        android:textColor="#757575"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Card 2: Category selection preview -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_elevated"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="14dp"
+                android:elevation="2dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_menu_manage"
+                    android:layout_marginEnd="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Expense Tracker"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#212121"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Categorize as: Tea / Travel / Grocery"
+                        android:textSize="12sp"
+                        android:textColor="#2E7D32"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Status message box -->
+        <LinearLayout
+            android:id="@+id/notifStatusBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_status_idle"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="14dp"
+            android:visibility="gone"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/tvNotifStatusMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#424242"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <!-- Progress dots -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="24dp">
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="#2E7D32"
+                android:layout_marginEnd="6dp"/>
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="#BDBDBD"/>
+        </LinearLayout>
+
+        <!-- Bottom spacer -->
+        <View android:layout_width="0dp" android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <!-- Grant Button -->
+        <Button
+            android:id="@+id/btnGrantNotification"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Grant Notification Access"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:background="@drawable/bg_button_green"
+            android:stateListAnimator="@null"/>
+
+    </LinearLayout>
+
+    <!-- STEP 2: Overlay Permission (hidden initially) -->
+    <LinearLayout
+        android:id="@+id/stepOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="28dp"
+        android:visibility="gone">
+
+        <!-- Top spacer -->
+        <View android:layout_width="0dp" android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <!-- Icon -->
+        <ImageView
+            android:id="@+id/imgOverlayIcon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_overlay"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Status icon -->
+        <ImageView
+            android:id="@+id/imgOverlayStatus"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:visibility="gone"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvOverlayTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Overlay Permission"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A1A"
+            android:gravity="center"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/tvOverlaySubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We need to show a quick popup when you make a payment."
+            android:textSize="15sp"
+            android:textColor="#757575"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- Preview Cards -->
+        <LinearLayout
+            android:id="@+id/overlayPreviewCards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="32dp">
+
+            <!-- Payment popup preview -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_elevated"
+                android:orientation="vertical"
+                android:padding="14dp"
+                android:layout_marginBottom="10dp"
+                android:elevation="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment detected: ₹500"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="#212121"
+                    android:layout_marginBottom="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:text="☕ Tea"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:textColor="#FFFFFF"
+                        android:background="#FF6F00"
+                        android:layout_marginEnd="4dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:text="🚗 Travel"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:textColor="#FFFFFF"
+                        android:background="#1565C0"
+                        android:layout_marginEnd="4dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:text="🛒 Grocery"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:textColor="#FFFFFF"
+                        android:background="#2E7D32"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Status message box -->
+        <LinearLayout
+            android:id="@+id/overlayStatusBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_status_idle"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="14dp"
+            android:visibility="gone"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/tvOverlayStatusMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#424242"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <!-- Progress dots -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="24dp">
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="#BDBDBD"
+                android:layout_marginEnd="6dp"/>
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="#2E7D32"/>
+        </LinearLayout>
+
+        <!-- Bottom spacer -->
+        <View android:layout_width="0dp" android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <!-- Grant Button -->
+        <Button
+            android:id="@+id/btnGrantOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Grant Overlay Permission"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:background="@drawable/bg_button_green"
+            android:stateListAnimator="@null"/>
+
+    </LinearLayout>
+
+</FrameLayout>

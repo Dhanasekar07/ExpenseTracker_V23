@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+    <!-- Bell shape -->
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M32,6 C32,6 18,14 18,30 L18,42 L14,46 L50,46 L46,42 L46,30 C46,14 32,6 32,6 Z"/>
+    <!-- Bell bottom -->
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M26,46 C26,49.3 28.7,52 32,52 C35.3,52 38,49.3 38,46 Z"/>
+    <!-- Notification dot -->
+    <path
+        android:fillColor="#F44336"
+        android:pathData="M44,16m-8,0a8,8 0,1 1,16 0a8,8 0,1 1,-16 0"/>
+</vector>

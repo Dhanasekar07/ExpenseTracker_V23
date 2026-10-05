@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Thick ring - main lime green -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#c8ee90"
+        android:strokeWidth="8"
+        android:pathData="M54,54m-24,0a24,24 0,1 1,48 0a24,24 0,1 1,-48 0"/>
+    <!-- Forest green segment (top-right arc) -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#2D6A4F"
+        android:strokeWidth="8"
+        android:strokeLineCap="round"
+        android:pathData="M54,30 A24,24 0,0 1,76,46"/>
+    <!-- Bright green segment (right-bottom arc) -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#4ADE80"
+        android:strokeWidth="8"
+        android:strokeLineCap="round"
+        android:pathData="M76,46 A24,24 0,0 1,64,75"/>
+    <!-- Rupee ₹ - horizontal lines -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#c8ee90"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M47,47 L61,47"/>
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#c8ee90"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M47,52 L61,52"/>
+    <!-- Rupee ₹ - vertical stem + curve -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#c8ee90"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M50,47 C50,47 56,47 56,49.5 C56,52 50,52 50,52"/>
+    <!-- Rupee ₹ - diagonal leg -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#c8ee90"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:pathData="M50,52 L58,63"/>
+</vector>

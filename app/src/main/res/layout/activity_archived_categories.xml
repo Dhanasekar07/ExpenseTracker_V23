@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F4F6F8">
+
+    <!-- App Bar -->
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="56dp"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:paddingStart="16dp" android:paddingEnd="16dp"
+        android:background="@color/bg_page" android:elevation="2dp">
+
+        <ImageView android:id="@+id/btnBack"
+            android:layout_width="24dp" android:layout_height="24dp"
+            android:src="@drawable/ic_back"/>
+
+        <TextView
+            android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Category Inventory"
+            android:textSize="18sp" android:textStyle="bold"
+            android:textColor="@color/text_primary" android:gravity="center"/>
+
+        <View android:layout_width="24dp" android:layout_height="24dp"/>
+    </LinearLayout>
+
+    <!-- Info banner -->
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="#F0FDF4" android:padding="12dp"
+        android:gravity="center_vertical"
+        android:layout_marginStart="16dp" android:layout_marginEnd="16dp"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Click + to add to Active Categories"
+            android:textSize="13sp" android:textColor="#2D6A4F"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- Archived list -->
+    <ScrollView
+        android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:padding="16dp">
+
+        <LinearLayout android:id="@+id/archivedListContainer"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </ScrollView>
+
+</LinearLayout>

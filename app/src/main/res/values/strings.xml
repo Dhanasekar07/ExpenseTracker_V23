@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Expense Tracker</string>
+    <string name="delete_confirmation">This category will be permanently deleted. This action cannot be undone.</string>
+    <string name="delete_transaction_confirmation">This transaction will be permanently deleted. This action cannot be undone.</string>
+</resources>

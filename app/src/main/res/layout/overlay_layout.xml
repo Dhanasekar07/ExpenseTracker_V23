@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#EE111111"
+    android:padding="8dp"
+    android:gravity="center_vertical">
+
+    <Button
+        android:id="@+id/btnTea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="☕ Tea"
+        android:textColor="#FFFFFF"
+        android:background="#FF6F00"
+        android:layout_marginEnd="4dp"
+        android:minWidth="0dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnTravel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🚗 Travel"
+        android:textColor="#FFFFFF"
+        android:background="#1976D2"
+        android:layout_marginEnd="4dp"
+        android:minWidth="0dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnGrocery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🛒 Grocery"
+        android:textColor="#FFFFFF"
+        android:background="#388E3C"
+        android:layout_marginEnd="4dp"
+        android:minWidth="0dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnIgnore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="❌"
+        android:textColor="#FFFFFF"
+        android:background="#D32F2F"
+        android:minWidth="0dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"/>
+
+</LinearLayout>

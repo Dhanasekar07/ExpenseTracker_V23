@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EEEEF4">
+
+    <!-- App Bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="#EEEEF4">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manage Categories"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+            android:id="@+id/btnArchive"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_archive"
+            android:layout_toStartOf="@+id/btnMenu"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"/>
+
+        <ImageView
+            android:id="@+id/btnMenu"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_more_vert"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <!-- Popup Preview Card - sticky -->
+    <LinearLayout
+        android:id="@+id/popupPreviewCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_popup_preview"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:padding="16dp"
+        android:elevation="2dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="POPUP PREVIEW"
+            android:textSize="11sp"
+            android:textColor="@color/text_hint"
+            android:gravity="center"
+            android:letterSpacing="0.08"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Chips row -->
+        <LinearLayout
+            android:id="@+id/previewContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </LinearLayout>
+
+    <!-- Categories | Events tab header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tabCategories"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Categories"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/text_primary"
+            android:background="@drawable/bg_nav_active_pill"
+            android:layout_marginEnd="6dp"/>
+
+        <TextView
+            android:id="@+id/tabEvents"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Events"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/text_secondary"
+            android:background="@null"/>
+    </LinearLayout>
+
+    <!-- Section header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:id="@+id/tvSectionTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Active Categories"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"/>
+
+        <TextView
+            android:id="@+id/btnAddNew"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="＋ Add Category"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#2D6A4F"
+            android:gravity="center"
+            android:background="@drawable/bg_add_category_btn"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"/>
+    </LinearLayout>
+
+    <!-- RecyclerView for drag-drop -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:clipToPadding="false"/>
+
+    <!-- Bottom Nav -->
+    <include layout="@layout/layout_bottom_nav"/>
+
+</LinearLayout>

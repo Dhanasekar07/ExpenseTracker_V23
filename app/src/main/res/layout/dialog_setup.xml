@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#FFFFFF">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="⚙ App Setup"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#212121"/>
+
+        <Button
+            android:id="@+id/btnCloseDialog"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="✕"
+            android:textColor="#757575"
+            android:background="@android:color/transparent"
+            android:padding="0dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Grant permissions to enable payment tracking"
+        android:textColor="#757575"
+        android:textSize="13sp"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Permission Status -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#F1F8E9"
+        android:padding="12dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/tvSmsStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SMS Access: ✗ Not granted"
+            android:textSize="13sp"
+            android:textColor="#757575"
+            android:layout_marginBottom="6dp"/>
+
+        <TextView
+            android:id="@+id/tvNotifStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notification Access: ✗ Not granted"
+            android:textSize="13sp"
+            android:textColor="#757575"
+            android:layout_marginBottom="6dp"/>
+
+        <TextView
+            android:id="@+id/tvOverlayStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Overlay Permission: ✗ Not granted"
+            android:textSize="13sp"
+            android:textColor="#757575"/>
+    </LinearLayout>
+
+    <!-- Buttons -->
+    <Button
+        android:id="@+id/btnDialogSms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. Grant SMS Access"
+        android:backgroundTint="#2E7D32"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btnDialogNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2. Grant Notification Access"
+        android:backgroundTint="#1565C0"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btnDialogOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3. Grant Overlay Permission"
+        android:backgroundTint="#6A1B9A"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btnDialogTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🧪 Test Overlay Now"
+        android:backgroundTint="#FF6F00"
+        android:textColor="#FFFFFF"/>
+
+</LinearLayout>

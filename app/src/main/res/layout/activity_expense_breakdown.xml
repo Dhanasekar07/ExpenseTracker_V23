@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EEEEF4">
+
+    <!-- STICKY TOP SECTION -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#EEEEF4"
+        android:elevation="4dp">
+
+        <!-- App Bar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_back"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expense Breakdown"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <!-- Filter tabs (Event dropdown pinned after Custom) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="10dp">
+        <HorizontalScrollView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView android:id="@+id/tabDay"
+                    android:layout_width="wrap_content" android:layout_height="34dp"
+                    android:text="Day" android:textSize="13sp" android:textColor="@color/text_secondary"
+                    android:gravity="center" android:background="@drawable/bg_filter_inactive"
+                    android:paddingStart="14dp" android:paddingEnd="14dp"
+                    android:layout_marginEnd="6dp"/>
+
+                <TextView android:id="@+id/tabWeek"
+                    android:layout_width="wrap_content" android:layout_height="34dp"
+                    android:text="Week" android:textSize="13sp" android:textColor="@color/text_secondary"
+                    android:gravity="center" android:background="@drawable/bg_filter_inactive"
+                    android:paddingStart="14dp" android:paddingEnd="14dp"
+                    android:layout_marginEnd="6dp"/>
+
+                <TextView android:id="@+id/tabMonth"
+                    android:layout_width="wrap_content" android:layout_height="34dp"
+                    android:text="Month" android:textSize="13sp" android:textColor="#FFFFFF"
+                    android:gravity="center" android:background="@drawable/bg_filter_active"
+                    android:paddingStart="14dp" android:paddingEnd="14dp"
+                    android:layout_marginEnd="6dp"/>
+
+                <TextView android:id="@+id/tabCustom"
+                    android:layout_width="wrap_content" android:layout_height="34dp"
+                    android:text="Custom" android:textSize="13sp" android:textColor="@color/text_secondary"
+                    android:gravity="center" android:background="@drawable/bg_filter_inactive"
+                    android:paddingStart="14dp" android:paddingEnd="14dp"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+        <LinearLayout
+                android:id="@+id/btnEventFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/bg_filter_inactive"
+                android:paddingStart="14dp"
+                android:paddingEnd="10dp"
+                android:layout_marginStart="2dp">
+
+                <TextView
+                    android:id="@+id/tvEventFilterLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Event"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_secondary"
+                    android:maxWidth="90dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
+
+                <ImageView
+                    android:id="@+id/ivEventFilterArrow"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="2dp"
+                    android:src="@drawable/ic_chevron_down"
+                    android:tint="@color/text_secondary"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Chart card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_rounded"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:padding="16dp"
+            android:elevation="2dp">
+
+            <!-- Total spent + period label row -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentStart="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Spent"
+                        android:textSize="11sp"
+                        android:textColor="@color/text_hint"/>
+
+                    <TextView
+                        android:id="@+id/tvTotalSpent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹0"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvPeriodLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="This Month"
+                    android:textSize="12sp"
+                    android:textColor="#52B788"
+                    android:background="@drawable/bg_filter_inactive"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <!-- Donut chart - large and centered -->
+            <com.example.expensetracker.PieChartView
+                android:id="@+id/pieChart"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Bar chart - same size, hidden by default -->
+            <com.example.expensetracker.BarChartView
+                android:id="@+id/barChart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"/>
+
+            <!-- Legend dots -->
+            <LinearLayout
+                android:id="@+id/chartLegendContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Carousel dots -->
+            <LinearLayout
+                android:id="@+id/dotsContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Scrollable category list -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="16dp">
+
+            <!-- Categories header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Categories"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Updated View"
+                    android:textSize="13sp"
+                    android:textColor="#2D6A4F"/>
+            </LinearLayout>
+
+            <!-- Breakdown rows -->
+            <LinearLayout
+                android:id="@+id/breakdownContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+            <!-- Budget tip card -->
+            <LinearLayout
+                android:id="@+id/budgetTipCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_budget_tip"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="14dp"
+                android:layout_marginTop="12dp"
+                android:visibility="gone">
+
+                <FrameLayout
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_filter_active"
+                    android:layout_marginEnd="12dp">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_lock"
+                        android:layout_gravity="center"/>
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tvBudgetTip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="#2D6A4F"
+                    android:lineSpacingExtra="3dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Nav -->
+    <include layout="@layout/layout_bottom_nav"/>
+
+</LinearLayout>
